@@ -10,7 +10,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'icons/*.svg'],
       manifest: {
-        name: 'Solana Mobile — Reference PWA',
+        name: 'Solana Mobile - Reference PWA',
         short_name: 'SM Reference',
         description:
           'Reference progressive web application for Solana Mobile: Mobile Wallet Adapter, TWA/Bubblewrap guidance, and mobile-first layout patterns.',

@@ -1,6 +1,6 @@
 {
   "name": "solanamobile",
-  "description": "Solana Mobile reference PWA — Mobile Wallet Adapter, TWA/Bubblewrap documentation, dApp Store packaging guidance",
+  "description": "Solana Mobile reference PWA - Mobile Wallet Adapter, TWA/Bubblewrap documentation, dApp Store packaging guidance",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -57,12 +57,10 @@ export function AboutScreen() {
       <section className="card card--highlight">
         <h2 className="card__title">Seed Vault and Mobile Wallet Adapter</h2>
         <p className="card__text">
-          This application does not embed Seed Vault SDKs directly. On Solana Mobile devices (e.g.
-          Seeker), <strong>Mobile Wallet Adapter</strong> sessions authorize signing through
-          user-selected <strong>MWA-compatible wallets</strong>. Wallets that integrate{' '}
-          <strong>Seed Vault</strong> use hardware-backed key custody for those operations—this is
-          the supported pattern for secure mobile signing on the Solana Mobile Stack. No extra
-          native module is required in the PWA beyond MWA.
+          For PWAs, <strong>Mobile Wallet Adapter</strong> is the official integration method. On
+          Solana Mobile devices, users connect an <strong>MWA-compatible wallet</strong>, and
+          compatible wallets may use <strong>Seed Vault</strong> for hardware-backed signing. No
+          separate Seed Vault SDK is required in this web app.
         </p>
         <a
           href="https://docs.solanamobile.com/solana-mobile-stack/seed-vault"
@@ -70,7 +68,7 @@ export function AboutScreen() {
           rel="noopener noreferrer"
           className="card__link"
         >
-          Seed Vault — official documentation
+          Seed Vault - official documentation
         </a>
       </section>
 
@@ -125,3 +123,4 @@ export function AboutScreen() {
     </div>
   )
 }
+

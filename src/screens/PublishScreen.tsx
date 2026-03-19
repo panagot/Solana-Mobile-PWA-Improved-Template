@@ -68,7 +68,7 @@ export function PublishScreen() {
           hardware.
         </p>
         <a href={TWA_OVERVIEW_URL} target="_blank" rel="noopener noreferrer" className="card__link">
-          Trusted Web Activity — technical overview
+          Trusted Web Activity - technical overview
         </a>
       </section>
     </div>

@@ -47,7 +47,7 @@ export function WalletScreen() {
     setSig(null)
     try {
       const msg = new TextEncoder().encode(
-        `Solana Mobile PWA demo — ${new Date().toISOString()}`
+        `Solana Mobile PWA demo - ${new Date().toISOString()}`
       )
       const out = await signMessage(msg)
       setSig(
@@ -100,7 +100,7 @@ export function WalletScreen() {
               {loadingBal
                 ? 'Loading…'
                 : lamports === null
-                  ? '—'
+                  ? '-'
                   : `${(lamports / LAMPORTS_PER_SOL).toFixed(6)} SOL`}
             </p>
             <button type="button" className="btn secondary" onClick={() => void refreshBalance()}>
