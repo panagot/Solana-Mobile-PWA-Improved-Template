@@ -21,7 +21,7 @@ export const REFERENCE_DOCUMENTATION: ReferenceLink[] = [
     href: 'https://docs.solanamobile.com/solana-mobile-stack/seed-vault',
     publisher: 'Solana Mobile',
     description:
-      'Hardware-level secure key custody on Seeker; Mobile Wallet Adapter sessions may authorize signing through Seed Vault–backed wallets.',
+      'Hardware-level secure key custody on Seeker; Mobile Wallet Adapter sessions may authorize signing through Seed Vault backed wallets.',
   },
   {
     label: 'Mobile Wallet Adapter - web applications',

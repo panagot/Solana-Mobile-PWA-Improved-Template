@@ -113,7 +113,7 @@ Keep **`/.well-known/assetlinks.json`** valid on the **same origin** you use in 
 
 ## Screenshots and device proof
 
-Add **3–5 real Android screenshots** (or a short video) to strengthen the submission: splash, bottom nav, wallet connect + sign, optional installed icon/TWA. See `screenshots/CAPTURE_CHECKLIST.txt`. Embed images in this README once added (e.g. `![Home](screenshots/02-home.png)`).
+Add **3 to 5 real Android screenshots** (or a short video) to strengthen the submission: splash, bottom nav, wallet connect + sign, optional installed icon/TWA. See `screenshots/CAPTURE_CHECKLIST.txt`. Embed images in this README once added (e.g. `![Home](screenshots/02-home.png)`).
 
 ## Quality checks (Lighthouse)
 
@@ -129,7 +129,7 @@ A minimal policy for this reference deployment is hosted at **`/privacy-policy.h
 
 ## Grant application - elevator pitch (template)
 
-*The Solana Mobile ecosystem lacks a ready-to-ship, highly optimized PWA template that delivers native-like Android UX and clear integration with the Solana Mobile Stack, forcing developers to reinvent Bubblewrap packaging, splash handling, and mobile navigation-slowing dApp Store–quality submissions. This project is a complete Vite + React + TypeScript PWA with `vite-plugin-pwa`, thumb-zone navigation, safe-area insets, manifest-aligned splash, Chrome-oriented TWA with Custom Tabs fallback (`customtabs`), and full `@solana-mobile/wallet-adapter-mobile` integration with explicit `appIdentity` for devnet balance and message signing. It ships Bubblewrap and Digital Asset Links templates, MIT license, CI, live HTTPS demo, and README mapping to RFP and Builder Grants criteria. As open-source infrastructure, it lowers the barrier for mobile-first Solana web apps, improves listing quality on the Solana dApp Store, and reinforces use of Mobile Wallet Adapter and Seed Vault–backed wallets on supported hardware.*
+*The Solana Mobile ecosystem lacks a ready-to-ship, highly optimized PWA template that delivers native-like Android UX and clear integration with the Solana Mobile Stack, forcing developers to reinvent Bubblewrap packaging, splash handling, and mobile navigation, which slows dApp Store quality submissions. This project is a complete Vite + React + TypeScript PWA with `vite-plugin-pwa`, thumb-zone navigation, safe-area insets, manifest-aligned splash, Chrome-oriented TWA with Custom Tabs fallback (`customtabs`), and full `@solana-mobile/wallet-adapter-mobile` integration with explicit `appIdentity` for devnet balance and message signing. It ships Bubblewrap and Digital Asset Links templates, MIT license, CI, live HTTPS demo, and README mapping to RFP and Builder Grants criteria. As open-source infrastructure, it lowers the barrier for mobile-first Solana web apps, improves listing quality on the Solana dApp Store, and reinforces use of Mobile Wallet Adapter and Seed Vault backed wallets on supported hardware.*
 
 ## Authoritative documentation
 
