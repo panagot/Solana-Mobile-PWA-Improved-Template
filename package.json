@@ -4,6 +4,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://solana-mobile-pwa-improved-template.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panagot/Solana-Mobile-PWA-Improved-Template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panagot/Solana-Mobile-PWA-Improved-Template/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

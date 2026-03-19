@@ -1,11 +1,21 @@
 # Solana Mobile — PWA Improved Template (reference application)
 
+[![CI](https://github.com/panagot/Solana-Mobile-PWA-Improved-Template/actions/workflows/ci.yml/badge.svg)](https://github.com/panagot/Solana-Mobile-PWA-Improved-Template/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Public reference **progressive web application** for the Solana Mobile ecosystem: **Mobile Wallet Adapter** on Android, **PWA** delivery, **Trusted Web Activity / Bubblewrap** packaging notes, and **dApp Store** publication alignment.
 
-| Resource | URL |
-|----------|-----|
+## Reviewer quick links
+
+| | |
+|--|--|
+| **Live demo (HTTPS)** | **[https://solana-mobile-pwa-improved-template.vercel.app](https://solana-mobile-pwa-improved-template.vercel.app)** |
 | **Source code** | [github.com/panagot/Solana-Mobile-PWA-Improved-Template](https://github.com/panagot/Solana-Mobile-PWA-Improved-Template) |
-| **Live demo** | Deploy on [Vercel](https://vercel.com) (see below); set `VITE_DEMO_URL` to your production URL so the in-app **About** screen links to it for reviewers. |
+| **Builder Grants** | [solanamobile.com/grants](https://solanamobile.com/grants) |
+
+> **GitHub repository settings:** Set **Website** (About → ⚙️) to the live demo URL above so it appears next to the repository description on GitHub.
+
+---
 
 ## Quick start
 
@@ -19,18 +29,17 @@ npm run build
 npm run preview
 ```
 
-## Deploy on Vercel (judges / reviewers)
+## Deploy on Vercel
 
-1. Import this GitHub repository in Vercel (framework preset: **Vite**).
-2. Build command: `npm run build` · Output directory: `dist`.
-3. Add **Environment variables** (Production):
+1. Import this repository (framework: **Vite**, output **`dist`**).
+2. Production environment variables (already defaulted in `.env.production` for reference; override in Vercel if needed):
 
    | Name | Value |
    |------|--------|
    | `VITE_GITHUB_REPO_URL` | `https://github.com/panagot/Solana-Mobile-PWA-Improved-Template` |
-   | `VITE_DEMO_URL` | Your Vercel deployment URL, e.g. `https://<project>.vercel.app` |
+   | `VITE_DEMO_URL` | `https://solana-mobile-pwa-improved-template.vercel.app` |
 
-4. Redeploy after changing variables. The **About** tab shows **Open live demo** when `VITE_DEMO_URL` is set.
+3. Redeploy after changes. The **Home** and **About** tabs surface **Live demo** and **GitHub** when these are set at build time.
 
 ## Environment variables
 

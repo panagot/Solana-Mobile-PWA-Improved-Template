@@ -1,4 +1,5 @@
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
+import { ReviewerLinks } from '../components/ReviewerLinks'
 import { SOLANA_NETWORK } from '../config'
 
 export function HomeScreen() {
@@ -13,6 +14,8 @@ export function HomeScreen() {
           packaging compatible with the Solana dApp Store.
         </p>
       </header>
+
+      <ReviewerLinks />
 
       <section className="card card--cta">
         <h2 className="card__title">Wallet connection</h2>

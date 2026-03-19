@@ -476,6 +476,56 @@ body {
   border-color: rgba(153, 69, 255, 0.25);
 }
 
+.card--reviewer {
+  border-color: rgba(20, 241, 149, 0.22);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(20, 241, 149, 0.05) 100%);
+}
+
+.reviewer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 380px) {
+  .reviewer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.reviewer-links__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-min);
+  padding: 0 1.15rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.reviewer-links__btn:active {
+  transform: scale(0.98);
+}
+
+.reviewer-links__btn--primary {
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(153, 69, 255, 0.3);
+}
+
+.reviewer-links__btn--secondary {
+  background: var(--bg-elevated);
+  color: var(--accent-2);
+  border: 1px solid rgba(20, 241, 149, 0.35);
+}
+
 .checklist--checks {
   list-style: none;
   padding-left: 0;
