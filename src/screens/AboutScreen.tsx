@@ -54,6 +54,26 @@ export function AboutScreen() {
         )}
       </section>
 
+      <section className="card card--highlight">
+        <h2 className="card__title">Seed Vault and Mobile Wallet Adapter</h2>
+        <p className="card__text">
+          This application does not embed Seed Vault SDKs directly. On Solana Mobile devices (e.g.
+          Seeker), <strong>Mobile Wallet Adapter</strong> sessions authorize signing through
+          user-selected <strong>MWA-compatible wallets</strong>. Wallets that integrate{' '}
+          <strong>Seed Vault</strong> use hardware-backed key custody for those operations—this is
+          the supported pattern for secure mobile signing on the Solana Mobile Stack. No extra
+          native module is required in the PWA beyond MWA.
+        </p>
+        <a
+          href="https://docs.solanamobile.com/solana-mobile-stack/seed-vault"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card__link"
+        >
+          Seed Vault — official documentation
+        </a>
+      </section>
+
       <section className="card">
         <h2 className="card__title">Builder Grants alignment</h2>
         <p className="card__text">
@@ -97,9 +117,9 @@ export function AboutScreen() {
         <h2 className="card__title">Legal and compliance</h2>
         <p className="card__text">
           Production listings on the Solana dApp Store require accurate privacy policy, license, and
-          related disclosures. This reference build includes a permissive open-source license file;
-          operators must host policy URLs required by the Publisher Portal and maintain them for the
-          life of the listing.
+          related disclosures. This reference deployment includes a minimal{' '}
+          <a href="/privacy-policy.html">privacy policy</a> for reviewer transparency; forked products
+          should replace it with counsel-reviewed text where required.
         </p>
       </section>
     </div>

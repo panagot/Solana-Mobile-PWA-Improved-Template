@@ -1,0 +1,9 @@
+Add PNG or WebP screenshots here for README / grant materials (recommended before final submit):
+
+1. Android Chrome — in-app splash (first launch)
+2. Android — bottom navigation + Home tab
+3. Android — Wallet tab after MWA connect + balance
+4. Android — installed PWA or TWA icon on home screen (when APK available)
+5. Optional — short screen recording: connect → sign message
+
+Name files descriptively, e.g. 01-splash.png, 02-home.png, then reference them from README.md.

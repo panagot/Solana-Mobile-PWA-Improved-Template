@@ -52,12 +52,16 @@ npm run preview
 
 Local overrides: copy `.env.example` to `.env`.
 
+## Seed Vault (Solana Mobile Stack)
+
+This template **does not ship a separate Seed Vault SDK** in the web app. That is intentional: for PWAs, **Mobile Wallet Adapter** is the supported integration path. On Solana Mobile devices (e.g. Seeker), users connect an **MWA-compatible wallet**; wallets that implement **Seed Vault** use hardware-backed key custody for signing—see the official **[Seed Vault documentation](https://docs.solanamobile.com/solana-mobile-stack/seed-vault)**. The in-app **Home** and **About** tabs state this explicitly for grant reviewers.
+
 ## Features
 
 | Area | Description |
 |------|-------------|
 | **Wallet** | `@solana-mobile/wallet-adapter-mobile` with `appIdentity`; Phantom for desktop development |
-| **SMS / Seed Vault** | MWA-compatible wallets on Solana Mobile hardware can use Seed Vault per [Solana docs](https://docs.solanamobile.com/solana-mobile-stack/seed-vault) |
+| **SMS / Seed Vault** | MWA → compatible wallets → Seed Vault on supported hardware ([docs](https://docs.solanamobile.com/solana-mobile-stack/seed-vault)) |
 | **PWA** | Manifest + Workbox service worker (`vite-plugin-pwa`) |
 | **Splash** | Manifest colors + in-app splash aligned for TWA |
 | **Chrome / TWA** | Bubblewrap `customtabs` fallback; Android non-Chrome notice when relevant |
@@ -91,6 +95,42 @@ npx @bubblewrap/cli init --manifest=https://YOUR_DOMAIN/manifest.webmanifest
 
 Align colors with this app (`#070b12`). Reference fields in `bubblewrap/twa-manifest.example.json`.
 
+## Trusted Web Activity — APK and GitHub Releases (recommended)
+
+Reviewers often expect a **downloadable signed APK** (or AAB), not only a hosted PWA.
+
+1. Deploy this site to HTTPS (e.g. Vercel) so `manifest.webmanifest` is live.
+2. Run Bubblewrap against that URL, configure signing, then build:
+
+   ```bash
+   npx @bubblewrap/cli init --manifest=https://solana-mobile-pwa-improved-template.vercel.app/manifest.webmanifest
+   npx @bubblewrap/cli build
+   ```
+
+3. Upload the generated **APK** (or bundle) to **[GitHub Releases](https://github.com/panagot/Solana-Mobile-PWA-Improved-Template/releases)** with release notes pointing to this README and the live demo.
+
+Keep **`/.well-known/assetlinks.json`** valid on the **same origin** you use in `twa-manifest.json`.
+
+## Screenshots and device proof
+
+Add **3–5 real Android screenshots** (or a short video) to strengthen the submission: splash, bottom nav, wallet connect + sign, optional installed icon/TWA. See `screenshots/CAPTURE_CHECKLIST.txt`. Embed images in this README once added (e.g. `![Home](screenshots/02-home.png)`).
+
+## Quality checks (Lighthouse)
+
+Run Chrome **Lighthouse** (or PageSpeed Insights) against the live demo URL. Target strong **PWA** and **Performance** scores; save a screenshot of the report for optional inclusion in grant materials.
+
+```text
+# Chrome DevTools → Lighthouse → Mode: Navigation → Analyze
+```
+
+## Privacy policy (dApp Store checklist)
+
+A minimal policy for this reference deployment is hosted at **`/privacy-policy.html`** (source: `public/privacy-policy.html`). List that URL in the Publisher Portal when required, or replace with your own legal review before production.
+
+## Grant application — elevator pitch (template)
+
+*The Solana Mobile ecosystem lacks a ready-to-ship, highly optimized PWA template that delivers native-like Android UX and clear integration with the Solana Mobile Stack, forcing developers to reinvent Bubblewrap packaging, splash handling, and mobile navigation—slowing dApp Store–quality submissions. This project is a complete Vite + React + TypeScript PWA with `vite-plugin-pwa`, thumb-zone navigation, safe-area insets, manifest-aligned splash, Chrome-oriented TWA with Custom Tabs fallback (`customtabs`), and full `@solana-mobile/wallet-adapter-mobile` integration with explicit `appIdentity` for devnet balance and message signing. It ships Bubblewrap and Digital Asset Links templates, MIT license, CI, live HTTPS demo, and README mapping to RFP and Builder Grants criteria. As open-source infrastructure, it lowers the barrier for mobile-first Solana web apps, improves listing quality on the Solana dApp Store, and reinforces use of Mobile Wallet Adapter and Seed Vault–backed wallets on supported hardware.*
+
 ## Authoritative documentation
 
 Also listed in-app under **About → Reference documentation**:
@@ -112,4 +152,4 @@ Also listed in-app under **About → Reference documentation**:
 
 ## License
 
-See `LICENSE`. Production dApp Store listings require your own privacy policy and compliance URLs where applicable.
+See `LICENSE`. Production dApp Store listings may require additional legal URLs; use [`/privacy-policy.html`](https://solana-mobile-pwa-improved-template.vercel.app/privacy-policy.html) as a starting point for this reference app only.

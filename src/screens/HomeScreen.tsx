@@ -17,6 +17,24 @@ export function HomeScreen() {
 
       <ReviewerLinks />
 
+      <section className="card">
+        <h2 className="card__title">Seed Vault (Solana Mobile Stack)</h2>
+        <p className="card__text">
+          Signing on Android uses <strong>Mobile Wallet Adapter</strong>. On Solana Mobile hardware,
+          compatible wallets may route authorization and signing through <strong>Seed Vault</strong>{' '}
+          (hardware-backed custody)—see the official{' '}
+          <a
+            href="https://docs.solanamobile.com/solana-mobile-stack/seed-vault"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Seed Vault documentation
+          </a>
+          . This PWA does not add a separate Seed Vault integration layer; MWA is the correct
+          integration surface for web apps.
+        </p>
+      </section>
+
       <section className="card card--cta">
         <h2 className="card__title">Wallet connection</h2>
         <p className="card__text">
